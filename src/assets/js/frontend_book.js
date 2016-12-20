@@ -40,6 +40,13 @@ window.FrontendBook = window.FrontendBook || {};
      * to make  changes to an existing appointment rather than booking a new one.
      */
     exports.initialize = function(bindEventHandlers, manageMode) {
+
+        var isInIframe = (window.location != window.parent.location) ? true : false;
+        if (isInIfrme) {
+          $('#header').hide(); 
+          $('#frame-footer').hide(); 
+        }
+
         bindEventHandlers = bindEventHandlers || true;
         manageMode = manageMode || false;
 
@@ -107,8 +114,26 @@ window.FrontendBook = window.FrontendBook || {};
             _applyAppointmentData(GlobalVariables.appointmentData,
                     GlobalVariables.providerData, GlobalVariables.customerData);
         } else {
-            var $selectProvider = $('#select-provider');
+            var $selectProviderFormGroup = $('#select-provider').closest('.form-group');
+            var $selectServiceFormGroup = $('#select-service').closest('.form-group');
+            var $(selectProvider) = $('#select-provider);
             var $selectService = $('#select-service'); 
+
+            if (isInIframe) {
+              if (GlobalVariables.availableProviders).length < 2) {
+                $selectProviderFormGroup.hide();
+              }
+              else {
+                $selectProviderFormGroup.show();
+              }
+
+              if (GlobalVariables.availableServices).length < 2) {
+                $selectServiceFormGroup.hide();
+              }
+              else {
+                $selectServiceFormGroup.show();
+              }
+            }
 
             // Check if a specific service was selected (via URL parameter).
             var selectedServiceId = GeneralFunctions.getUrlParameter(location.href, 'service');
