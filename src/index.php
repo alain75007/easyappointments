@@ -47,7 +47,14 @@
   *
   */
 
- require_once __DIR__ . '/config.php';
+  $uri = $_SERVER['REQUEST_URI'];
+  parse_str($_SERVER['QUERY_STRING']);
+  $file = '/config.php';
+  if (isset($book)) {                                                                                                                         
+    $file = '/configs/' . $book . ".php";
+  }                                                                                                                                          
+  require_once __DIR__ . $file;
+  #require_once __DIR__ . '/config.php'; 
 
  /*
   *---------------------------------------------------------------
