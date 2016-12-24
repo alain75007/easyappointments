@@ -1,0 +1,43 @@
+body.embedded {
+  background: #fff;
+}
+
+body.embedded #book-appointment-wizard {
+  border: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  body.embedded #main {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+body.embedded .frame-title  {
+  text-align: left !important;
+  display: none;
+}
+
+body.embedded #header {
+  display: none;
+}
+
+body.embedded #main .wrapper {
+  vertical-align: top;
+}
+
+body.embedded #frame-footer {
+  display: none;
+}
+
+body.embedded #book-appointment-wizard h3 {
+  font-size: 18px;
+}
+
+/*
+body.embedded.alone .form-group.select-provider {
+display: none;
+}
+*/
+

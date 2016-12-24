@@ -32,6 +32,10 @@
         rel="stylesheet"
         type="text/css"
         href="<?php echo base_url('assets/css/general.css'); ?>">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="<?php echo base_url('assets/css/imv2.css'); ?>">
 
     <?php
         // ------------------------------------------------------------
@@ -45,7 +49,7 @@
             href="<?php echo base_url('assets/img/logo.png'); ?>">
 </head>
 
-<body>
+<body class="embedded">
     <div id="main" class="container">
         <div class="wrapper row">
             <div id="book-appointment-wizard" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
