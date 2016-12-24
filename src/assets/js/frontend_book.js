@@ -42,7 +42,7 @@ window.FrontendBook = window.FrontendBook || {};
     exports.initialize = function(bindEventHandlers, manageMode) {
 
         var isInIframe = (window.location != window.parent.location) ? true : false;
-        if (isInIfrme) {
+        if (isInIframe) {
           $('#header').hide(); 
           $('#frame-footer').hide(); 
         }
@@ -116,18 +116,18 @@ window.FrontendBook = window.FrontendBook || {};
         } else {
             var $selectProviderFormGroup = $('#select-provider').closest('.form-group');
             var $selectServiceFormGroup = $('#select-service').closest('.form-group');
-            var $(selectProvider) = $('#select-provider);
+            var $selectProvider = $('#select-provider');
             var $selectService = $('#select-service'); 
 
             if (isInIframe) {
-              if (GlobalVariables.availableProviders).length < 2) {
+              if (GlobalVariables.availableProviders.length < 2) {
                 $selectProviderFormGroup.hide();
               }
               else {
                 $selectProviderFormGroup.show();
               }
 
-              if (GlobalVariables.availableServices).length < 2) {
+              if (GlobalVariables.availableServices.length < 2) {
                 $selectServiceFormGroup.hide();
               }
               else {
