@@ -275,9 +275,15 @@
                                     <label for="phone-number" class="control-label"><?php echo $this->lang->line('phone_number'); ?> *</label>
                                     <input type="text" id="phone-number" class="required form-control" maxlength="60" />
                                 </div>
+                                <div class="form-group">
+                                    <label for="notes" class="control-label"><?php echo $this->lang->line('notes'); ?></label>
+                                    <textarea id="notes" maxlength="500" class="form-control" rows="3"></textarea>
+                                </div>
+                                <em id="form-message" class="text-danger"><?php echo $this->lang->line('fields_are_required'); ?></em>
                             </div>
 
-                            <div class="col-xs-12 col-sm-6">
+			    
+                            <div class="col-xs-12 col-sm-6" style="display:none">
                                 <div class="form-group">
                                     <label for="address" class="control-label"><?php echo $this->lang->line('address'); ?></label>
                                     <input type="text" id="address" class="form-control" maxlength="250" />
@@ -290,13 +296,13 @@
                                     <label for="zip-code" class="control-label"><?php echo $this->lang->line('zip_code'); ?></label>
                                     <input type="text" id="zip-code" class="form-control" maxlength="120" />
                                 </div>
-                                <div class="form-group">
+                                <!--div class="form-group">
                                     <label for="notes" class="control-label"><?php echo $this->lang->line('notes'); ?></label>
                                     <textarea id="notes" maxlength="500" class="form-control" rows="3"></textarea>
-                                </div>
+                                </div-->
                             </div>
 
-                            <em id="form-message" class="text-danger"><?php echo $this->lang->line('fields_are_required'); ?></em>
+                            <!--em id="form-message" class="text-danger"><?php echo $this->lang->line('fields_are_required'); ?></em-->
                         </div>
                     </div>
 

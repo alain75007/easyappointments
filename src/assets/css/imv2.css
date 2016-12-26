@@ -16,7 +16,6 @@ body.embedded #book-appointment-wizard {
 
 body.embedded .frame-title  {
   text-align: left !important;
-  display: none;
 }
 
 body.embedded #header {

@@ -120,7 +120,7 @@ window.FrontendBook = window.FrontendBook || {};
             var $selectService = $('#select-service'); 
 
             if (isInIframe) {
-              if (GlobalVariables.availableProviders.length < 2) {
+              if (GlobalVariables.availableProviders.length < 3) {
                 $selectProviderFormGroup.hide();
               }
               else {
